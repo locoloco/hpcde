@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--favicon icon-->
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="16x16" />
+    <!--title-->
+    <title>Statistics - Human Phenome Common Data Elements</title>
+    <!--build:css-->
+    <link href="assets/css/main.css"  rel="stylesheet" />
+    <link href="assets/css/custom.css"  rel="stylesheet" />
+   
+    <!-- endbuild -->
+
+</head>
+
+<body>
+    <!--preloader start-->
+    <div id="preloader">
+        <div class="preloader-wrap">
+            <img src="assets/img/logo-normal.png" alt="Human Phenome Common Data Elements" class="img-fluid" />
+            <div class="preloader">
+                <i>.</i>
+                <i>.</i>
+                <i>.</i>
+            </div>
+        </div>
+    </div>
+    <!--preloader end-->
+    <!--header section start-->
+    <header id="header" class="header-main">
+        <!--main header menu start-->
+        <div id="logoAndNav" class="main-header-menu-wrap bg-transparent fixed-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-md header-nav">
+                    <!--logo start-->
+                    <a class="navbar-brand pt-0" href="index.html">
+                        <img src="assets/img/logo-light.png" alt="Human Phenome Common Data Elements" />
+                    </a>
+                    <!--logo end-->
+
+                    <!--responsive toggle button start-->
+                    <button type="button" class="navbar-toggler btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">
+                        <span id="hamburgerTrigger">
+            <span class="fas fa-bars"></span>
+                        </span>
+                    </button>
+                    <!--responsive toggle button end-->
+
+                    <!--main menu start-->
+                    <div id="navBar" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ms-auto main-navbar-nav">
+                            <li class="nav-item custom-nav-item">
+                                <a class="nav-link custom-nav-link" href="javascript:void(0);">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item custom-nav-item">
+                                <a class="nav-link custom-nav-link" href="javascript:void(0);">
+                                    HPCDE Browser
+                                </a>
+                            </li>
+                            <li class="nav-item custom-nav-item">
+                                <a class="nav-link custom-nav-link active" href="index-statistics.html">
+                                    Statistics
+                                </a>
+                            </li>
+                          
+                            <li class="nav-item custom-nav-item">
+                                <a class="nav-link custom-nav-link" href="JavaScript:Void(0);">
+                                    Downloads
+                                </a>
+                            </li>
+                            <li class="nav-item custom-nav-item">
+                                <a class="nav-link custom-nav-link" href="JavaScript:Void(0);">
+                                    Tools
+                                </a>
+                            </li>
+                            <li class="nav-item custom-nav-item">
+                                <a class="nav-link custom-nav-link" href="JavaScript:Void(0);">
+                                    About
+                                </a>
+                            </li>
+                          
+                        </ul>
+                    </div>
+                    <!--main menu end-->
+                </nav>
+            </div>
+        </div>
+        <!--main header menu end-->
+
+        <!--offcanvas menu start-->
+        <div class="offcanvas offcanvas-start" id="offcanvasLeft" tabindex="-1">
+            <div class="offcanvas-header border-bottom">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo-normal.png" alt="Human Phenome Common Data Elements" class="img-fluid" />
+                </a>
+                <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body offcanvas-menu-wrap">
+                <!--offcanvas menu list start-->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HPCDE Browser</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-statistics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Downloads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="JavaScript:Void(0);">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >About</a>
+                    </li>
+                
+                </ul>
+                <!--offcanvas menu list end-->
+            </div>
+        </div>
+        <!--offcanvas menu end-->
+    </header>
+    <!--header section end-->
+
+    <div class="main">
+        <!--hero section start-->
+        <section id="hero-section" class="hero-equal-height ptb-120 gradient-overlay bg-image" data-overlay="8">
+            <div id="webgl-canvas" ></div>
+            <div class="background-image-wraper" style="background: url('assets/img/hero-min.jpg') no-repeat center center / cover; opacity: 1;"></div>
+            <div class="container">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 col-lg-8">
+                            <div class="hero-content-wrap text-white text-center position-relative">
+                                <h1 class="text-white" xt-marked="ok">Statistics</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--hero section end-->
+        <section class="feature-section ptb-80 gray-light-bg">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3">
+                            <div class="features-box-content">
+                                <h5>HPCDE领域数量图</h5>
+                                <div id="chart-01" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3 bg-white">
+                            <div class="features-box-content">
+                                <h5>feature数量统计</h5>
+                                <div id="chart-02" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3 bg-white">
+                            <div class="features-box-content">
+                                <h5>qualifier数量统计</h5>
+                                <div id="chart-03" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3 bg-white">
+                            <div class="features-box-content">
+                                <h5>各领域本体对应率</h5>
+                                <div id="chart-04" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3 bg-white">
+                            <div class="features-box-content">
+                                <h5>交叉引用数据集的来源统计</h5>
+                                <div id="chart-05" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3 bg-white">
+                            <div class="features-box-content">
+                                <h5>近期访问或下载数量最多的领域或词条</h5>
+                                <div id="chart-06" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3 bg-white">
+                            <div class="features-box-content">
+                                <h5>概念图</h5>
+                                <p><img src="assets/img/pic-paf.png" class="img-fluid" style="height:400px" alt="概念图"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3 bg-white">
+                            <div class="features-box-content position-relative">
+                                <h5>和弦图</h5>
+                                <div id="chart-chord" style="height:400px">
+                                </div>
+                                <div class="msk"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-3">
+                        <div class="features-box p-3 bg-white">
+                            <div class="features-box-content">
+                                <h5>气泡图</h5>
+                                <div id="chart-bubble" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <!--footer bottom copyright start-->
+    <div class="footer-bottom py-3 bg-secondary">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-7">
+                    <div class="copyright-wrap small-text">
+                        <p class="mb-0 text-center">
+                            &copy; Human Phenome Common Data Elements, All rights reserved
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--footer bottom copyright end-->
+    <!--footer section end-->
+
+    
+    <div class="scroll-top scroll-to-target primary-bg text-white" data-target="html">
+        <span class="fas fa-arrow-up-long"></span>
+    </div>
+    <!--scroll bottom to top button end-->
+  
+    <!--build:js-->
+    <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/echarts.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src='https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js'></script>
+    <script src='https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.gammel.js'></script>
+    <script src='https://unpkg.com/jquery-fusioncharts@1.1.0/dist/fusioncharts.jqueryplugin.js'></script>
+    <script src="assets/js/three.min.js"></script>
+    <script src="assets/js/particle.js"></script>
+    <!--endbuild-->
+    <script>
+        $("#chart-chord").insertFusionCharts({
+            type: "chord",
+            width: "100%",
+            height: "100%",
+            dataFormat: "json",
+            dataSource: {
+                chart: {
+                nodelabelposition: "outside",
+                theme: "gammel"
+                },
+                links: [
+                {
+                    from: "HAP",
+                    to: "Biological",
+                    value: 60
+                },
+                {
+                    from: "Biological",
+                    to: "HAP",
+                    value: 60
+                },
+                {
+                    from: "HAP",
+                    to: "Physical",
+                    value: 6563
+                },
+                {
+                    from: "Physical",
+                    to: "HAP",
+                    value: 6563
+                },
+                {
+                    from: "HAP",
+                    to: "Questionnaire",
+                    value: 30
+                },
+                {
+                    from: "Questionnaire",
+                    to: "HAP",
+                    value: 30
+                },
+                {
+                    from: "ORP",
+                    to: "Biological",
+                    value: 2
+                },
+                {
+                    from: "Biological",
+                    to: "ORP",
+                    value: 2
+                },
+                {
+                    from: "ORP",
+                    to: "Physical",
+                    value: 1787
+                },
+                {
+                    from: "Physical",
+                    to: "ORP",
+                    value: 1787
+                },
+                {
+                    from: "ORP",
+                    to: "Questionnaire",
+                    value: 0
+                },
+                {
+                    from: "Questionnaire",
+                    to: "ORP",
+                    value: 0
+                },
+                {
+                    from: "MID",
+                    to: "Biological",
+                    value: 699
+                },
+                {
+                    from: "Biological",
+                    to: "MID",
+                    value: 699
+                },
+                {
+                    from: "MID",
+                    to: "Physical",
+                    value: 502
+                },
+                {
+                    from: "Physical",
+                    to: "MID",
+                    value: 502
+                },
+                {
+                    from: "MID",
+                    to: "Questionnaire",
+                    value: 9
+                },
+                {
+                    from: "Questionnaire",
+                    to: "MID",
+                    value: 9
+                },
+                {
+                    from: "SI",
+                    to: "Biological",
+                    value: 554
+                },
+                {
+                    from: "Biological",
+                    to: "SI",
+                    value: 554
+                },
+                {
+                    from: "SI",
+                    to: "Physical",
+                    value: 439
+                },
+                {
+                    from: "Physical",
+                    to: "SI",
+                    value: 439
+                },
+                {
+                    from: "SI",
+                    to: "Questionnaire",
+                    value: 0
+                },
+                {
+                    from: "Questionnaire",
+                    to: "SI",
+                    value: 0
+                },
+                {
+                    from: "MM",
+                    to: "Biological",
+                    value: 1476
+                },
+                {
+                    from: "Biological",
+                    to: "MM",
+                    value: 1476
+                },
+                {
+                    from: "MM",
+                    to: "Physical",
+                    value: 1005
+                },
+                {
+                    from: "Physical",
+                    to: "MM",
+                    value: 1005
+                },
+                {
+                    from: "MM",
+                    to: "Questionnaire",
+                    value: 0
+                },
+                {
+                    from: "Questionnaire",
+                    to: "MM",
+                    value: 0
+                },
+                {
+                    from: "ST",
+                    to: "Biological",
+                    value: 1608
+                },
+                {
+                    from: "Biological",
+                    to: "ST",
+                    value: 1608
+                },
+                {
+                    from: "ST",
+                    to: "Physical",
+                    value: 11
+                },
+                {
+                    from: "Physical",
+                    to: "ST",
+                    value: 11
+                },
+                {
+                    from: "ST",
+                    to: "Questionnaire",
+                    value: 0
+                },
+                {
+                    from: "Questionnaire",
+                    to: "ST",
+                    value: 0
+                },
+                {
+                    from: "MIT",
+                    to: "Biological",
+                    value: 1449
+                },
+                {
+                    from: "Biological",
+                    to: "MIT",
+                    value: 1449
+                },
+                {
+                    from: "MIT",
+                    to: "Physical",
+                    value: 58
+                },
+                {
+                    from: "Physical",
+                    to: "MIT",
+                    value: 58
+                },
+                {
+                    from: "MIT",
+                    to: "Questionnaire",
+                    value: 58
+                },
+                {
+                    from: "Questionnaire",
+                    to: "MIT",
+                    value: 58
+                },
+                {
+                    from: "MU",
+                    to: "Biological",
+                    value: 15
+                },
+                {
+                    from: "Biological",
+                    to: "MU",
+                    value: 15
+                },
+                {
+                    from: "MU",
+                    to: "Physical",
+                    value: 6
+                },
+                {
+                    from: "Physical",
+                    to: "MU",
+                    value: 6
+                },
+                {
+                    from: "MU",
+                    to: "Questionnaire",
+                    value: 0
+                },
+                {
+                    from: "Questionnaire",
+                    to: "MU",
+                    value: 0
+                },
+                {
+                    from: "MP",
+                    to: "Biological",
+                    value: 0
+                },
+                {
+                    from: "Biological",
+                    to: "MP",
+                    value: 0
+                },
+                {
+                    from: "MP",
+                    to: "Physical",
+                    value: 730
+                },
+                {
+                    from: "Physical",
+                    to: "MP",
+                    value: 730
+                },
+                {
+                    from: "MP",
+                    to: "Questionnaire",
+                    value: 0
+                },
+                {
+                    from: "Questionnaire",
+                    to: "MP",
+                    value: 0
+                },
+                {
+                    from: "Others",
+                    to: "Biological",
+                    value: 46
+                },
+                {
+                    from: "Biological",
+                    to: "Others",
+                    value: 46
+                },
+                {
+                    from: "Others",
+                    to: "Physical",
+                    value: 0
+                },
+                {
+                    from: "Physical",
+                    to: "Others",
+                    value: 0
+                },
+                {
+                    from: "Others",
+                    to: "Questionnaire",
+                    value: 16
+                },
+                {
+                    from: "Questionnaire",
+                    to: "Others",
+                    value: 16
+                },
+                
+                ]
+            }
+        });
+
+        var ct01 = echarts.init(document.getElementById('chart-01'));
+        ct01.showLoading();
+        $.get('./assets/js/disk.tree.json', function (diskData) {
+            ct01.setOption(
+                (option = {
+                title: {},
+                tooltip: {
+                    formatter: function (info) {
+                    var value = info.value;
+                    var treePathInfo = info.treePathInfo;
+                    var treePath = [];
+                    for (var i = 1; i < treePathInfo.length; i++) {
+                        treePath.push(treePathInfo[i].name);
+                    }
+                    return [
+                        '<div class="tooltip-title">' +
+                        formatUtil.encodeHTML(treePath.join('/')) +
+                        '</div>',
+                        'Disk Usage: ' + formatUtil.addCommas(value) + ' KB'
+                    ].join('');
+                    }
+                },
+                series: [
+                    {
+                    name: 'Disk Usage',
+                    type: 'treemap',
+                    visibleMin: 300,
+                    label: {
+                        show: true,
+                        formatter: '{b}'
+                    },
+                    itemStyle: {
+                        borderColor: '#fff'
+                    },
+                    levels: getLevelOption(),
+                    data: diskData
+                    }
+                ]
+                })
+            );
+        });
+        ct01.hideLoading();
+        const formatUtil = echarts.format;
+        function getLevelOption() {
+            return [
+            {
+                itemStyle: {
+                borderWidth: 0,
+                gapWidth: 5
+                }
+            },
+            {
+                itemStyle: {
+                gapWidth: 1
+                }
+            },
+            {
+                colorSaturation: [0.35, 0.5],
+                itemStyle: {
+                gapWidth: 1,
+                borderColorSaturation: 0.6
+                }
+            }
+            ];
+        }
+        var ct02 = echarts.init(document.getElementById('chart-02'));
+        let c02 = {
+                grid:{
+                    top:'10%',
+                    bottom:'30%',
+                    left:'10%',
+                    right:'5%'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                    type: 'shadow'
+                    },
+                },
+                xAxis: [{
+                    type: 'category',
+                    name: 'Features',
+                    nameLocation: 'center',
+                    position:'bottom', 
+                    nameGap: 100,
+                    nameRotate: 0,
+                    axisLine: {
+                        show: true,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    splitLine: {
+                        show: false,
+                    },
+                    axisLabel:{
+                        rotate:30
+                    },
+                    data: ['Chemical', 'Physical', 'Questionnaire & Scale', 'Biological', 'Environmental exposure', 'Demographic', 'Quality control' ],
+                }],
+                yAxis: [
+                {
+                    type: 'value',
+                    name: "log10",
+                    nameLocation: "center",
+                    nameGap: 25,
+                    min: 0,
+                    axisLine: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        formatter: '{value}',
+                        inside: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            type: "dotted",
+                        }
+                    },
+                }],
+                series: [
+                {
+                    name: 'feature数量统计',
+                    type: 'bar',
+                    barWidth: 20,
+                    markPoint:'arrow',
+                    label: {
+                        show: true,
+                        fontSize: 13,
+                        position: 'top',
+                        padding:[4,6]
+                    },
+                    data: [5.17,3.04,2.94,2.70,2.10,1.32,1.04]
+                }],
+        }
+        ct02.setOption(c02)
+       
+        var ct03 = echarts.init(document.getElementById('chart-03'));
+        let c03 = {
+                grid:{
+                    top:'10%',
+                    bottom:'30%',
+                    left:'10%',
+                    right:'5%'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                    type: 'shadow'
+                    },
+                },
+                xAxis: [{
+                    type: 'category',
+                    name: 'Qualifiers',
+                    nameLocation: 'center',
+                    position:'bottom', 
+                    nameGap: 100,
+                    nameRotate: 0,
+                    axisLine: {
+                        show: true,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    splitLine: {
+                        show: false,
+                    },
+                    axisLabel:{
+                        rotate:35
+                    },
+                    data: ['Human anatomical parts', 'Measurement parameters', 'Others', 'Measurement indicators', 'Measurement methods', 'Orientation and relative position', 'Statistical indicators','Measurement instrument','Measurement unit','Sample type' ],
+                }],
+                yAxis: [
+                {
+                    type: 'value',
+                    name: "log10",
+                    nameLocation: "center",
+                    nameGap: 25,
+                    min: 0,
+                    axisLine: {
+                        show: false,
+                    },
+                    axisLabel: {
+                        formatter: '{value}',
+                        inside: false,
+                    },
+                    axisTick: {
+                        show: false,
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            type: "dotted",
+                        }
+                    },
+                }],
+                series: [
+                {
+                    name: 'qualifier数量统计',
+                    type: 'bar',
+                    barWidth: 20,
+                    markPoint:'arrow',
+                    label: {
+                        show: true,
+                        fontSize: 13,
+                        position: 'top',
+                        padding:[4,6]
+                    },
+                    data: [2.73,2.49,2.22,2.06,1.79,1.64,1.46,1.00,0.78,0.78]
+                }],
+        }
+        ct03.setOption(c03)
+
+        var ct04 = echarts.init(document.getElementById('chart-04'));
+        let c04 = {
+            grid:{
+                top:'10%',
+                bottom:'30%',
+                left:'10%',
+                right:'5%'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+                }
+            },
+            legend: {},
+            grid: {
+                left: '8%',
+                right: '4%',
+                bottom: '3%',
+                top:'6%',
+                containLabel: true
+            },
+            xAxis: {
+                name: 'Mapping.Ratio',
+                nameLocation: 'center',
+                position:'bottom', 
+                nameGap: 20,
+                type: 'value',
+                min:0,
+                max:1
+            },
+            yAxis: {
+                name: "Research.Areas",
+                nameLocation: "center",
+                nameGap: 160,
+                axisLabel:{
+                    width:150,
+                    overflow:'truncate'
+                },
+                type: 'category',
+                data: ["Environmental exposure (119)","Traditional Chinese Medicine (215)","Digestive system (13)","Volunteer recruitment (546)","Skin and its appendages (260)","Exercise (51)","Cell (1461)","Sensory (1445)","Bioelectricity (608)","Anthropometry (396)","DXA body composition (736)","Ultrasound (267)","Ophthalmology (56)","Metabolomics (2153)","Kindney and urinary system (117)","Sleep (364)","Nucleic acids (121412)","Vocal (181)","Endocrinology and metabolism (90)","Psychology (127)","Pulmonary function (16)","Biochemistry (18)","Proteomics (22474)","Medical examination (92)","Metabolic chamber (24)","Imaging (1049)","Metagenomics (1138)","Human energy metabolism (4)"]
+            },
+            series: [
+                {
+                name: 'EXACT',
+                type: 'bar',
+                stack: 'total',
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [0.05,0.12,0.13,0.26,0.27,0.28,0.35,0.45,0.46,0.5,0.625,0.63,0.64,0.75,0.76,0.78,0.85,0.86,0.87,0.88,0.89,0.90,0.90,0.93,0.92,0.94,1,1]
+                },
+                {
+                name: 'PARTIAL',
+                type: 'bar',
+                stack: 'total',
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [0.95,0.35,0.87,0.35,0.7,0.25,0.65,0.55,0.35,0.3,0.35,0.37,0.36,0,0.125,0.11,0,0.08,0.08,0,0.11,0.10,0,0.07,0,0.06,0,0,]
+                },
+                {
+                name: 'TBD',
+                type: 'bar',
+                stack: 'total',
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [0,0.53, 0, 0.39,0.03,0.47,0,0,0.19,0.2,0.025,0,0,0.25, 0.115,0.11, 0.15, 0.06, 0.05, 0.12,0,0,0.1,0,0.08,0,0,0]
+                },
+               
+            ]
+        }
+        ct04.setOption(c04)
+
+        var ct05 = echarts.init(document.getElementById('chart-05'));
+        let c05 = {
+            legend: {},
+            angleAxis: {
+                show:false
+            },
+            radiusAxis: {show:false},
+            polar: {},
+            series: [
+                {
+                type: 'bar',
+                data: [1, 2, 3, 4, 3, 5, 1],
+                coordinateSystem: 'polar',
+                name: 'Biomedical Literature',
+                stack: 'a',
+                emphasis: {
+                    focus: 'series'
+                }
+                },
+                {
+                type: 'bar',
+                data: [2, 4, 6, 1, 3, 2, 1],
+                coordinateSystem: 'polar',
+                name: 'General Domain Ontology',
+                stack: 'a',
+                emphasis: {
+                    focus: 'series'
+                }
+                },
+                {
+                type: 'bar',
+                data: [1, 2, 3, 4, 1, 2, 5],
+                coordinateSystem: 'polar',
+                name: 'Phenotypic Dataset',
+                stack: 'a',
+                emphasis: {
+                    focus: 'series'
+                }
+                }
+            ],
+        }
+        ct05.setOption(c05)
+
+        var ct06 = echarts.init(document.getElementById('chart-06'));
+        let c06 = {
+            title:[
+                {
+                    text: 'Domain',
+                    left: '50%',
+                    textAlign: 'center'
+                },
+                {
+                    text: 'HPCDE terms',
+                    left: '50%',
+                    top:'50%',
+                    textAlign: 'center'
+                },
+            ],
+            grid: [
+                {
+                    top: 20,
+                    bottom: '50%',
+                    left: 10,
+                    containLabel: true
+                },
+                {
+                    top: '55%',
+                    bottom: 0,
+                    left: 10,
+                    containLabel: true
+                }
+            ],
+            xAxis: [
+                {
+                    type: 'value',
+                    splitLine: {
+                        show: false
+                    }
+                },
+                {
+                    type: 'value',
+                    gridIndex: 1,
+                    splitLine: {
+                        show: false
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'category',
+                    data: ['Chemical','Physical','Biologica','Demographic','Quality control'],
+                    axisLabel: {
+                        interval: 0,
+                        // rotate: 30
+                    },
+                    splitLine: {
+                        show: false
+                    }
+                },
+                {
+                    gridIndex: 1,
+                    type: 'category',
+                    data: ['HAP','MM','ORP','ST','MID'],
+                    axisLabel: {
+                        interval: 0,
+                        // rotate: 30
+                    },
+                    splitLine: {
+                        show: false
+                    }
+                }
+            ],
+            series: [
+                {
+                    type: 'bar',
+                    stack: 'chart',
+                    z: 3,
+                    label: {
+                        position: 'right',
+                        show: true
+                    },
+                    data: [500,600,700,800,900,]
+                },
+                {
+                    type: 'bar',
+                    stack: 'component',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    z: 3,
+                    label: {
+                        position: 'right',
+                        show: true
+                    },
+                    data: [1500,1600,1700,1800,1900,]
+                },
+            ]
+        }
+        ct06.setOption(c06)
+
+        var ct07 = echarts.init(document.getElementById('chart-bubble'));
+        let c07 = {
+            // tooltip: {
+            //     position: 'top',
+            //     formatter: function(params) {
+            //         return params.value[2] + '';
+            //     }
+            // },
+            grid:{
+                top:'10%',
+                bottom:'10%',
+                left:'18%',
+                right:'5%'
+            },
+            legend: {
+                type:'scroll',
+                left: 'left'
+            },
+            xAxis: {
+                name: "Number of assembly level classifications",
+                nameLocation: "center",
+                nameGap: 25,
+                type: 'category',
+                data: ["0","1","2","3","4","5","6","7"],
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                }
+            },
+            yAxis: {
+                name: "CDE Research Areas",
+                nameLocation: "center",
+                nameGap: 50,
+                type: 'category',
+                offset:10,
+                data: ["PSY","VOR","ENY","PUF","BIC","CEL","PEX","TCM","MGM","USO","IMG","VOC","SIA","SLP","ANT","DBC","SEN","BIE","MBM","PRO" ],
+                axisLabel: {
+                    margin: 10,
+                    // padding:[0,20,0,0]
+                },
+                splitLine: {
+                    show:true,
+                    lineStyle: {
+                        type: "dashed"
+                    }
+                },
+                axisLine: {
+                    show: false
+                }
+            },
+            series: [
+                {
+                    name: "Biological Phenotype",
+                    type: "scatter",
+                    label: {
+                        show: true,
+                        formatter: function (params) {
+                            return params.value[2] + ''
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return val[2]/80 +10;
+                    },
+                    data: [[0, 0, 127],[0, 1, 699],[0,2,4],[0, 3, 16],[0, 4, 18],[2,5,3],[3,5,430],[4,5,483],[5,5,545],[0,6,11],[1,6,74],[2,6,7],[0,7,71],[1,7,61],[2,7,5],[0,8,1098]],
+                    animationDelay: function (idx) {
+                     return idx * 5;
+                    },
+                  
+                },
+                {
+                    name: "Chemical  Phenotype",
+                    type: "scatter",
+                    label: {
+                        show: true,
+                        formatter: function (params) {
+                            return params.value[2] + ''
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return val[2]/800 +10;
+                    },
+                    data: [[0, 18, 2153],[0, 19, 14505]],
+                    animationDelay: function (idx) {
+                    return idx * 5;
+                    },
+                },
+                {
+                    name: "Physical Phenotype",
+                    type: "scatter",
+                    label: {
+                        show: true,
+                        formatter: function (params) {
+                            return params.value[2] + ''
+                        }
+                    },
+                    symbolSize: function (val) {
+                        return val[2]/80 +10;
+                    },
+                    data: [[1, 9, 24],[2, 9, 149],[3, 9, 73],[4, 9, 21],[0, 10, 1],[1, 10, 875],[2, 10, 118],[3, 10, 55],[0, 11, 32],[1, 11, 101],[2, 11, 30],[3, 11, 18],[0, 12, 32],[1, 12, 109],[2, 12, 113],[3, 12, 1],[0, 13, 124],[1, 13, 63],[2, 13, 80],[3, 13, 92],[4, 13, 5],[0, 14, 43],[1, 14, 66],[2, 14, 210],[3, 14, 60],[4, 14, 16],[5, 14, 1],[0, 15, 83],[1, 15, 38],[2, 15, 298],[3, 15, 232],[4, 15, 80],[5, 15, 5],[0, 16, 4],[1, 16, 34],[2, 16, 539],[3, 16, 147],[4, 16, 589],[5, 16, 131],[7, 16, 1],[0, 17, 1],[1, 17, 179],[2, 17, 267],[3, 17, 63],[4, 17, 11],[5, 17, 39],[6, 17, 4],[7, 17, 44]],
+                    animationDelay: function (idx) {
+                    return idx * 5;
+                    },
+                },
+                ]
+        }
+        ct07.setOption(c07)
+    </script>    
+</body>
+
+</html>

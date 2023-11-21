@@ -1,0 +1,54 @@
+::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+body{
+    font-family: -apple-system,'BlinkMacSystemFont','Helvetica Neue','PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
+
+}
+.hero-equal-height{
+    min-height: 300px;
+}
+.hero-equal-height canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.hero-content-wrap h1{
+    text-shadow: -1px 3px 8px #1e328d;
+}
+.main{
+    min-height: calc(100vh - 54px);
+}
+.main-navbar-nav .nav-item a.active{
+    opacity: 1;
+}
+.features-box-content h5{
+    font-size: 1rem;
+}
+
+.msk{
+    background:#fff;
+    position: absolute;
+    bottom:0;
+    left:0;
+    height:30px;
+    width: 100%;
+}
+@media (min-width: 1280px){
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 80%;
+    }
+}
