@@ -152,7 +152,7 @@
         <section class="feature-section ptb-80 gray-light-bg">
             <div class="container">
                 <div class="row g-3">
-                    <div class="col-md-6 col-lg-4 mt-3">
+                    <div class="col-md-6 col-lg-6 mt-3">
                         <div class="features-box p-3">
                             <div class="features-box-content">
                                 <h5>HPCDE领域数量图</h5>
@@ -160,7 +160,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mt-3">
+                    <div class="col-md-6 col-lg-6 mt-3">
                         <div class="features-box p-3 bg-white">
                             <div class="features-box-content">
                                 <h5>feature数量统计</h5>
@@ -168,7 +168,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mt-3">
+                    <div class="col-md-6 col-lg-6 mt-3">
                         <div class="features-box p-3 bg-white">
                             <div class="features-box-content">
                                 <h5>qualifier数量统计</h5>
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mt-3">
+                    <div class="col-md-6 col-lg-6 mt-3">
                         <div class="features-box p-3 bg-white">
                             <div class="features-box-content">
                                 <h5>各领域本体对应率</h5>
@@ -184,7 +184,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mt-3">
+                    <div class="col-md-6 col-lg-6 mt-3">
                         <div class="features-box p-3 bg-white">
                             <div class="features-box-content">
                                 <h5>交叉引用数据集的来源统计</h5>
@@ -192,7 +192,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mt-3">
+                    <div class="col-md-6 col-lg-6 mt-3">
                         <div class="features-box p-3 bg-white">
                             <div class="features-box-content">
                                 <h5>近期访问或下载数量最多的领域或词条</h5>
@@ -265,7 +265,7 @@
     <script src="assets/js/echarts.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src='https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js'></script>
-    <script src='https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.gammel.js'></script>
+    <script src='https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js'></script>
     <script src='https://unpkg.com/jquery-fusioncharts@1.1.0/dist/fusioncharts.jqueryplugin.js'></script>
     <script src="assets/js/three.min.js"></script>
     <script src="assets/js/particle.js"></script>
@@ -278,8 +278,14 @@
             dataFormat: "json",
             dataSource: {
                 chart: {
-                nodelabelposition: "outside",
-                theme: "gammel"
+                "nodelabelposition": "outside",
+                "showLegend": "0",
+                "nodelabelposition": "tangential",
+                "chordradius": 134,
+                "startingAngle": "70",
+                "linkaplha": 40,
+                "nodealpha": 50,
+                "theme": "fusion",
                 },
                 links: [
                 {
@@ -582,7 +588,6 @@
                     to: "Others",
                     value: 16
                 },
-                
                 ]
             }
         });
@@ -669,6 +674,9 @@
                 xAxis: [{
                     type: 'category',
                     name: 'Features',
+                    nameTextStyle:{
+                        fontWeight:'bold'
+                    },
                     nameLocation: 'center',
                     position:'bottom', 
                     nameGap: 100,
@@ -683,7 +691,7 @@
                         show: false,
                     },
                     axisLabel:{
-                        rotate:30
+                        rotate:-30
                     },
                     data: ['Chemical', 'Physical', 'Questionnaire & Scale', 'Biological', 'Environmental exposure', 'Demographic', 'Quality control' ],
                 }],
@@ -692,7 +700,10 @@
                     type: 'value',
                     name: "log10",
                     nameLocation: "center",
-                    nameGap: 25,
+                    nameGap: 40,
+                    nameTextStyle:{
+                        fontWeight:'bold'
+                    },
                     min: 0,
                     axisLine: {
                         show: false,
@@ -745,6 +756,9 @@
                 xAxis: [{
                     type: 'category',
                     name: 'Qualifiers',
+                    nameTextStyle:{
+                        fontWeight:'bold'
+                    },
                     nameLocation: 'center',
                     position:'bottom', 
                     nameGap: 100,
@@ -759,7 +773,7 @@
                         show: false,
                     },
                     axisLabel:{
-                        rotate:35
+                        rotate:-30
                     },
                     data: ['Human anatomical parts', 'Measurement parameters', 'Others', 'Measurement indicators', 'Measurement methods', 'Orientation and relative position', 'Statistical indicators','Measurement instrument','Measurement unit','Sample type' ],
                 }],
@@ -767,8 +781,11 @@
                 {
                     type: 'value',
                     name: "log10",
+                    nameTextStyle:{
+                        fontWeight:'bold'
+                    },
                     nameLocation: "center",
-                    nameGap: 25,
+                    nameGap: 40,
                     min: 0,
                     axisLine: {
                         show: false,
@@ -828,6 +845,9 @@
             },
             xAxis: {
                 name: 'Mapping.Ratio',
+                nameTextStyle:{
+                    fontWeight:'bold'
+                },
                 nameLocation: 'center',
                 position:'bottom', 
                 nameGap: 20,
@@ -837,9 +857,14 @@
             },
             yAxis: {
                 name: "Research.Areas",
+                nameTextStyle:{
+                    fontWeight:'bold'
+                },
                 nameLocation: "center",
-                nameGap: 160,
+                nameGap: 180,
+                minInterval: 1,
                 axisLabel:{
+                    interval:0,
                     width:150,
                     overflow:'truncate'
                 },
@@ -883,41 +908,323 @@
         let c05 = {
             legend: {},
             angleAxis: {
-                show:false
+                show:false,
+                type:'category',
+                data:[]
             },
             radiusAxis: {show:false},
-            polar: {},
+            polar: {
+                radius:[0,'100%']
+            },
+            tooltip: {},
             series: [
                 {
-                type: 'bar',
-                data: [1, 2, 3, 4, 3, 5, 1],
-                coordinateSystem: 'polar',
-                name: 'Biomedical Literature',
-                stack: 'a',
-                emphasis: {
-                    focus: 'series'
-                }
+                    type: 'bar',
+                    // data: [1, 2, 3, 4, 3, 5, 1],
+                    data: [{name:'Literature (4594)',value:3.662190991}],
+                    coordinateSystem: 'polar',
+                    name: 'Biomedical Literature',
+                    itemStyle:{color:'#f2bab5'},
+                    label: {
+                        show: true,
+                        rotate: 1.4,
+                        position:[10, 82],
+                        formatter: ['{name|{b}}'].join('\n'),
+                        rich:{
+                            name:{
+                                color:'#5a494a',
+                                        fontSize:"10"
+                            }
+                        }
+                    },
+                    stack: 'a',
+                    emphasis: {
+                        focus: 'series'
+                    }
                 },
                 {
-                type: 'bar',
-                data: [2, 4, 6, 1, 3, 2, 1],
-                coordinateSystem: 'polar',
-                name: 'General Domain Ontology',
-                stack: 'a',
-                emphasis: {
-                    focus: 'series'
-                }
+                    type: 'bar',
+                    // data: [2, 4, 6, 1, 3, 2, 1],
+                    data:[
+                        null,
+                        {
+                            name:'LOINC (2812)',
+                            value:3.449015316,
+                            label: {
+                                show: true,
+                                rotate: 1,
+                                position:[36, 65],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'NCIT (2748)',
+                            value:3.439016728,
+                            label: {
+                                show: true,
+                                rotate: 0.55,
+                                position:[60, 45],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'OBI (1076)',
+                            value:3.031812271,
+                            label: {
+                                show: true,
+                                rotate: 0.25,
+                                position:[66, 26],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'SNOMED CT (1420)',
+                            value:3.152288344,
+                            label: {
+                                show: true,
+                                rotate: -0.2,
+                                position:[32, 2],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        }
+                    ],
+                    coordinateSystem: 'polar',
+                    name: 'General Domain Ontology',
+                    itemStyle:{color:'#cfd27b'},
+                    stack: 'a',
+                    emphasis: {
+                        focus: 'series'
+                    }
                 },
                 {
-                type: 'bar',
-                data: [1, 2, 3, 4, 1, 2, 5],
-                coordinateSystem: 'polar',
-                name: 'Phenotypic Dataset',
-                stack: 'a',
-                emphasis: {
-                    focus: 'series'
-                }
-                }
+                    type: 'bar',
+                    // data: [1, 2, 3, 4, 1, 2, 5],
+                    data:[
+                    null, null, null, null, null,
+                        {
+                            name:'BBJ (80)',
+                            value:1.903089987,
+                            label: {
+                                show: true,
+                                rotate: -0.6,
+                                position:[33, 18],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'PhenX (1056)',
+                            value:3.023663918,
+                            label: {
+                                show: true,
+                                rotate: -1,
+                                position:[32, 40],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'UKB (3202)',
+                            value:3.505421328,
+                            label: {
+                                show: true,
+                                rotate: -1.35,
+                                position:[20, 80],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },
+                    ],
+                    coordinateSystem: 'polar',
+                    name: 'Phenotypic Dataset',
+                    itemStyle:{color:'#92dfbb'},
+                    stack: 'a',
+                    emphasis: {
+                        focus: 'series'
+                    }
+                },
+                {
+                    type: 'bar',
+                    data:[
+                    null, null, null, null, null, null, null, null,
+                        {
+                            name:'BioCyc (542)',
+                            value:2.733999287,
+                            label: {
+                                show: true,
+                                rotate: 1.3,
+                                position:[10, 100],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'HMDB (322)',
+                            value:2.507855872,
+                            label: {
+                                show: true,
+                                rotate: 1,
+                                position:[12, 76],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'LIPID MAPS (489)',
+                            value:2.689308859,
+                            label: {
+                                show: true,
+                                rotate: 0.65,
+                                position:[10, 58],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'Uniprot (13274)',
+                            value:4.123001813,
+                            label: {
+                                show: true,
+                                rotate: 0.2,
+                                position:[5, 26],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },
+                    ],
+                    coordinateSystem: 'polar',
+                    name: 'Specialized Database',
+                    itemStyle:{color:'#92d7fb'},
+                    stack: 'a',
+                    emphasis: {
+                        focus: 'series'
+                    }
+                },
+                {
+                    type: 'bar',
+                    data:[
+                    null, null, null, null, null, null, null, null, null, null, null, null,
+                        {
+                            name:'CL (533)',
+                            value:2.726727209,
+                            label: {
+                                show: true,
+                                rotate: -0.2,
+                                position:[5, 15],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'FMA (6288)',
+                            value:3.798512533,
+                            label: {
+                                show: true,
+                                rotate: -0.55,
+                                position:[18, 18],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'RADLEX (554)',
+                            value:2.743509765,
+                            label: {
+                                show: true,
+                                rotate: -1,
+                                position:[22, 10],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },{
+                            name:'UO (506)',
+                            value:2.704150517,
+                            label: {
+                                show: true,
+                                rotate: -1.3,
+                                position:[20, 8],
+                                formatter: ['{name|{b}}'].join('\n'),
+                                rich:{
+                                    name:{
+                                        color:'#5a494a',
+                                        fontSize:"10"
+                                    }
+                                }
+                            },
+                        },
+                    ],
+                    coordinateSystem: 'polar',
+                    name: 'Specialized Domain Ontology',
+                    itemStyle:{color:'#ebb3fa'},
+                    stack: 'a',
+                    emphasis: {
+                        focus: 'series'
+                    }
+                },
             ],
         }
         ct05.setOption(c05)
@@ -947,7 +1254,7 @@
                 {
                     top: '55%',
                     bottom: 0,
-                    left: 10,
+                    left: 70,
                     containLabel: true
                 }
             ],
@@ -970,9 +1277,10 @@
                 {
                     type: 'category',
                     data: ['Chemical','Physical','Biologica','Demographic','Quality control'],
-                    axisLabel: {
-                        interval: 0,
-                        // rotate: 30
+                    axisLabel:{
+                        interval:0,
+                        width:150,
+                        overflow:'truncate'
                     },
                     splitLine: {
                         show: false
@@ -982,9 +1290,10 @@
                     gridIndex: 1,
                     type: 'category',
                     data: ['HAP','MM','ORP','ST','MID'],
-                    axisLabel: {
-                        interval: 0,
-                        // rotate: 30
+                    axisLabel:{
+                        interval:0,
+                        width:150,
+                        overflow:'truncate'
                     },
                     splitLine: {
                         show: false
@@ -1020,12 +1329,12 @@
 
         var ct07 = echarts.init(document.getElementById('chart-bubble'));
         let c07 = {
-            // tooltip: {
-            //     position: 'top',
-            //     formatter: function(params) {
-            //         return params.value[2] + '';
-            //     }
-            // },
+            tooltip: {
+                position: 'top',
+                formatter: function(params) {
+                    return params.value[2] + '';
+                }
+            },
             grid:{
                 top:'10%',
                 bottom:'10%',
@@ -1039,6 +1348,9 @@
             xAxis: {
                 name: "Number of assembly level classifications",
                 nameLocation: "center",
+                nameTextStyle:{
+                    fontWeight:'bold'
+                },
                 nameGap: 25,
                 type: 'category',
                 data: ["0","1","2","3","4","5","6","7"],
@@ -1053,6 +1365,9 @@
             yAxis: {
                 name: "CDE Research Areas",
                 nameLocation: "center",
+                nameTextStyle:{
+                    fontWeight:'bold'
+                },
                 nameGap: 50,
                 type: 'category',
                 offset:10,
@@ -1075,12 +1390,12 @@
                 {
                     name: "Biological Phenotype",
                     type: "scatter",
-                    label: {
-                        show: true,
-                        formatter: function (params) {
-                            return params.value[2] + ''
-                        }
-                    },
+                    // label: {
+                    //     show: true,
+                    //     formatter: function (params) {
+                    //         return params.value[2] + ''
+                    //     }
+                    // },
                     symbolSize: function (val) {
                         return val[2]/80 +10;
                     },
@@ -1093,12 +1408,12 @@
                 {
                     name: "Chemical  Phenotype",
                     type: "scatter",
-                    label: {
-                        show: true,
-                        formatter: function (params) {
-                            return params.value[2] + ''
-                        }
-                    },
+                    // label: {
+                    //     show: true,
+                    //     formatter: function (params) {
+                    //         return params.value[2] + ''
+                    //     }
+                    // },
                     symbolSize: function (val) {
                         return val[2]/800 +10;
                     },
@@ -1110,12 +1425,12 @@
                 {
                     name: "Physical Phenotype",
                     type: "scatter",
-                    label: {
-                        show: true,
-                        formatter: function (params) {
-                            return params.value[2] + ''
-                        }
-                    },
+                    // label: {
+                    //     show: true,
+                    //     formatter: function (params) {
+                    //         return params.value[2] + ''
+                    //     }
+                    // },
                     symbolSize: function (val) {
                         return val[2]/80 +10;
                     },
